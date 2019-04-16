@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:voiceView="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/bg_dialog"
+    android:maxWidth="280dp"
+    android:maxHeight="200dp"
+    android:minWidth="100dp"
+    android:minHeight="100dp">
+
+    <ImageView
+        android:id="@+id/image_cancle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_cancel" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+
+        <EditText
+            android:id="@+id/edit_result"
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_dialog_edit"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_search"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/edit_result"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_dialog_btn"
+                android:text="搜索"
+                android:visibility="gone" />
+
+            <cn.ck.security.wedget.WaveViewByBezier
+                android:id="@+id/wave_bezier"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+            <com.carlos.voiceline.mylibrary.VoiceLineView
+                android:id="@+id/voicLine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                voiceView:maxVolume="200"
+                voiceView:middleLine="#2196F3"
+                voiceView:middleLineHeight="1dp"
+                voiceView:fineness="three"
+                voiceView:rectSpace="2dp"
+                voiceView:rectWidth="5dp"
+                voiceView:sensibility="four"
+                voiceView:viewMode="line"
+                voiceView:voiceLine="#2196F3" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="232dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/fl_search"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dialog_btn"
+                android:text="开始识别" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dialog_btn"
+                android:text="停止识别" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
